@@ -1,0 +1,43 @@
+{
+  "id": "8433b08d-ba38-4655-8f3f-d6c0a25afe06",
+  "timestamp": "2017-03-12T07:53:32.816Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "I want to buy cheese, but I already have potato",
+    "action": "product.add",
+    "actionIncomplete": false,
+    "parameters": {
+      "AddProduct": [
+        "cheese"
+      ],
+      "RemoveProduct": [
+        "potato"
+      ]
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "5ee3940b-e036-4470-9842-54de39690dac",
+      "webhookUsed": "false",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "AddProduct"
+    },
+    "fulfillment": {
+      "speech": "cheese added to the grocery list.",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "cheese added to the grocery list."
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "6f56c3be-6f86-460e-815d-cc4de8f82a72"
+}
+
+
