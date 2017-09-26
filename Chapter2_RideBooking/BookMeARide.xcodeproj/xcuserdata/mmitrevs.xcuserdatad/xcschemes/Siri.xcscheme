@@ -59,7 +59,7 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      intentQueryString = "Book me a ride from Paris to London"
+      intentQueryString = "Book me a ride from Paris to London using CoolRide."
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       language = ""
@@ -71,16 +71,22 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "com.mitrevski.BookMeARide"
-         RemotePath = "/Users/mmitrevs/Library/Developer/CoreSimulator/Devices/48238B5E-FD47-49BC-A1B3-34FDA420FAE4/data/Containers/Bundle/Application/4C9F33BF-8D74-43CD-B466-C942DEFF27D7/BookMeARide.app">
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.notificationcenterui">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E85E995B1E7E749F00B1F2C5"
+            BuildableName = "Siri.appex"
+            BlueprintName = "Siri"
+            ReferencedContainer = "container:BookMeARide.xcodeproj">
+         </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E88D64F41E7C6EAC0079552D"
-            BuildableName = "BookMeARide.app"
-            BlueprintName = "BookMeARide"
+            BlueprintIdentifier = "E85E995B1E7E749F00B1F2C5"
+            BuildableName = "Siri.appex"
+            BlueprintName = "Siri"
             ReferencedContainer = "container:BookMeARide.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -89,7 +95,7 @@
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
-      intentQueryString = "Book me a ride from Paris to London"
+      intentQueryString = "Book me a ride from Paris to London using CoolRide."
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"

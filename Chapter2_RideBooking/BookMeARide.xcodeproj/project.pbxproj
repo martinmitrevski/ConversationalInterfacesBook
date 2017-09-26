@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E814C7061E83088B0022AE29 /* RideStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814C7051E83088B0022AE29 /* RideStorage.swift */; };
 		E814C70A1E832B890022AE29 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = E814C7091E832B890022AE29 /* car.png */; };
+		E84A7A4F1F79715100DFD7E3 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = E84A7A4E1F79715100DFD7E3 /* AppIntentVocabulary.plist */; };
 		E85E99681E7E74A000B1F2C5 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85E99671E7E74A000B1F2C5 /* IntentsUI.framework */; };
 		E85E996E1E7E74A000B1F2C5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85E996C1E7E74A000B1F2C5 /* MainInterface.storyboard */; };
 		E85E99721E7E74A000B1F2C5 /* SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E85E99651E7E74A000B1F2C5 /* SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -66,6 +67,7 @@
 		E814C7041E8305200022AE29 /* BookMeARide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookMeARide.entitlements; sourceTree = "<group>"; };
 		E814C7051E83088B0022AE29 /* RideStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideStorage.swift; sourceTree = "<group>"; };
 		E814C7091E832B890022AE29 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		E84A7A4E1F79715100DFD7E3 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		E85E995C1E7E749F00B1F2C5 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85E99651E7E74A000B1F2C5 /* SiriUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85E99671E7E74A000B1F2C5 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
@@ -175,6 +177,7 @@
 				E88D64FF1E7C6EAD0079552D /* Assets.xcassets */,
 				E88D65011E7C6EAD0079552D /* LaunchScreen.storyboard */,
 				E88D65041E7C6EAD0079552D /* Info.plist */,
+				E84A7A4E1F79715100DFD7E3 /* AppIntentVocabulary.plist */,
 			);
 			path = BookMeARide;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				E88D65031E7C6EAD0079552D /* LaunchScreen.storyboard in Resources */,
 				E88D65001E7C6EAD0079552D /* Assets.xcassets in Resources */,
+				E84A7A4F1F79715100DFD7E3 /* AppIntentVocabulary.plist in Resources */,
 				E88D64FE1E7C6EAC0079552D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
