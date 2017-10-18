@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AA1A10F51779DEE8FF962A7B0C98A6A0'
+               BlueprintIdentifier = 'C321297C3045A2D34570469CAEF11B8A'
                BlueprintName = 'ApiAI'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ApiAI.framework'>

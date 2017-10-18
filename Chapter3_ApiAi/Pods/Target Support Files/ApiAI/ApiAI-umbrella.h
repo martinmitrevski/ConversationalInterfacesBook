@@ -6,6 +6,7 @@
 #import "AIConfiguration.h"
 #import "AIDefaultConfiguration.h"
 #import "AINullabilityDefines.h"
+#import "AIOriginalRequest.h"
 #import "AIQueryRequest.h"
 #import "AIRequest.h"
 #import "AIRequestContext.h"

@@ -28,9 +28,19 @@ class TestBookingARide: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBasicRideRequest() {
+        // Activate Siri
+        let siri = XCUIDevice.shared.siriService
+        siri.activate(voiceRecognitionText: "Book me a ride from Paris to London")
+        
+        // Wait for Siri response
+        let predicate = NSPredicate { (_, _) -> Bool in
+            sleep(5)
+            return true
+        }
+        let siriResponseExpectation = expectation(for: predicate, evaluatedWith: siri, handler: nil)
+        self.wait(for: [siriResponseExpectation], timeout: 10)
+        print(siriResponseExpectation.expectationDescription)
     }
     
 }
