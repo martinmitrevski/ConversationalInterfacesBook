@@ -16,8 +16,8 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
     }
     
     
-    func handle(requestRide intent: INRequestRideIntent,
-                completion: @escaping (INRequestRideIntentResponse) -> Swift.Void) {
+    func handle(intent: INRequestRideIntent,
+                completion: @escaping (INRequestRideIntentResponse) -> Void) {
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INRequestRideIntentResponse.self))
         let response = INRequestRideIntentResponse(code: .success,
                                                    userActivity: userActivity)
@@ -35,13 +35,13 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
         completion(response)
     }
     
-    func confirm(requestRide intent: INRequestRideIntent,
-                 completion: @escaping (INRequestRideIntentResponse) -> Swift.Void) {
+    func confirm(intent: INRequestRideIntent,
+                 completion: @escaping (INRequestRideIntentResponse) -> Void) {
         self.handleIntent(requestRide: intent, completion: completion)
     }
     
     private func handleIntent(requestRide intent: INRequestRideIntent,
-                              completion: @escaping (INRequestRideIntentResponse) -> Swift.Void) {
+                              completion: @escaping (INRequestRideIntentResponse) -> Void) {
         let userActivity =
             NSUserActivity(activityType: NSStringFromClass(INRequestRideIntentResponse.self))
         var response = INRequestRideIntentResponse(code: .success,
@@ -83,7 +83,7 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
         }
     }
     
-    func resolvePickupLocation(forRequestRide intent: INRequestRideIntent,
+    func resolvePickupLocation(for intent: INRequestRideIntent,
                                with completion: @escaping (INPlacemarkResolutionResult) -> Void) {
         if (intent.pickupLocation == nil) {
             let result = INPlacemarkResolutionResult.needsValue()
@@ -94,7 +94,7 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
         }
     }
     
-    func resolveDropOffLocation(forRequestRide intent: INRequestRideIntent,
+    func resolveDropOffLocation(for intent: INRequestRideIntent,
                                 with completion: @escaping (INPlacemarkResolutionResult) -> Void) {
         if (intent.dropOffLocation == nil) {
             let result = INPlacemarkResolutionResult.needsValue()
@@ -128,7 +128,7 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
         return rideStatus
     }
     
-    func resolveRideOptionName(forRequestRide intent: INRequestRideIntent,
+    func resolveRideOptionName(for intent: INRequestRideIntent,
                         with completion: @escaping (INSpeakableStringResolutionResult) -> Void) {
         if let rideOption = intent.rideOptionName {
             let result = INSpeakableStringResolutionResult.success(with: rideOption)
@@ -159,7 +159,7 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
         completion(result)
     }
     
-    public func handle(getRideStatus intent: INGetRideStatusIntent,
+    public func handle(intent: INGetRideStatusIntent,
                        completion: @escaping (INGetRideStatusIntentResponse) -> Void) {
         guard let latest = RideStorage.latestRide() else {
             failureResponse(completion: completion)
@@ -213,13 +213,13 @@ class IntentHandler: INExtension, INRequestRideIntentHandling, INGetRideStatusIn
     }
     
     
-    public func startSendingUpdates(forGetRideStatus intent: INGetRideStatusIntent,
+    public func startSendingUpdates(for intent: INGetRideStatusIntent,
                                     to observer: INGetRideStatusIntentResponseObserver) {
         print("Siri started asking for updates for the ride")
     }
     
     
-    public func stopSendingUpdates(forGetRideStatus intent: INGetRideStatusIntent) {
+    public func stopSendingUpdates(for intent: INGetRideStatusIntent) {
         print("Siri stopped asking for updates for the ride")
     }
 
