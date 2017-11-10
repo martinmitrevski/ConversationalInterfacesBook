@@ -15,9 +15,7 @@
 		E85E99721E7E74A000B1F2C5 /* SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E85E99651E7E74A000B1F2C5 /* SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E85E99751E7E74A000B1F2C5 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E85E995C1E7E749F00B1F2C5 /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E85E99801E7E75CB00B1F2C5 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E997E1E7E75CB00B1F2C5 /* IntentHandler.swift */; };
-		E85E99811E7E75CB00B1F2C5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85E997F1E7E75CB00B1F2C5 /* Info.plist */; };
 		E85E99841E7E75EE00B1F2C5 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E99821E7E75EE00B1F2C5 /* IntentViewController.swift */; };
-		E85E99851E7E75EE00B1F2C5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85E99831E7E75EE00B1F2C5 /* Info.plist */; };
 		E85E99861E7E761F00B1F2C5 /* DummyRideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D650B1E7C6F300079552D /* DummyRideService.swift */; };
 		E85E99871E7E785F00B1F2C5 /* RideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D650C1E7C6F300079552D /* RideService.swift */; };
 		E85E99881E7E786600B1F2C5 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D650A1E7C6F300079552D /* Ride.swift */; };
@@ -296,7 +294,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Martin Mitrevski";
 				TargetAttributes = {
 					E85E995B1E7E749F00B1F2C5 = {
@@ -356,7 +354,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E85E99811E7E75CB00B1F2C5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +362,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E814C70A1E832B890022AE29 /* car.png in Resources */,
-				E85E99851E7E75EE00B1F2C5 /* Info.plist in Resources */,
 				E85E996E1E7E74A000B1F2C5 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,7 +603,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -615,7 +613,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -656,7 +658,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -664,7 +668,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
