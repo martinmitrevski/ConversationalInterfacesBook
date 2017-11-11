@@ -7,7 +7,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var from: UITextField?
     @IBOutlet weak var to: UITextField?
     @IBOutlet weak var ridesTableView: UITableView?
-    
+    var selectedRow: IndexPath?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
