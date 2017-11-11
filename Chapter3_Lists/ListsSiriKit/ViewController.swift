@@ -66,6 +66,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.present(alertController, animated: true, completion: nil)
     }
     
+    // MARK: private
+    
+    private func alertForAddingItems() -> UIAlertController {
+        let alertController = ListsSiriKit.alertForAddingItems(title: "Please provide list name",
+                                                               placeholder: "List name")
+        return addActions(toAlertController: alertController,
+                          saveActionHandler: { [unowned self] action in
+                            let textField = alertController.textFields![0]
+                            if let text = textField.text {
+                                if text != "" {
+                                    ListsManager.sharedInstance.createList(name: text)
+                                    self.tableView.reloadData()
+                                }
+                            }
+                            alertController.dismiss(animated: true, completion: nil)
+        })
+    }
+    
     // MARK: Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,24 +93,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             next.listName = listName
             selectedRow = nil
         }
-    }
-    
-    // MARK: private
-    
-    private func alertForAddingItems() -> UIAlertController {
-        let alertController = ListsSiriKit.alertForAddingItems(title: "Please provide list name",
-                                                  placeholder: "List name")
-        return addActions(toAlertController: alertController,
-                          saveActionHandler: { [unowned self] action in
-            let textField = alertController.textFields![0]
-            if let text = textField.text {
-                if text != "" {
-                    ListsManager.sharedInstance.createList(name: text)
-                    self.tableView.reloadData()
-                }
-            }
-            alertController.dismiss(animated: true, completion: nil)
-            })
     }
     
 }

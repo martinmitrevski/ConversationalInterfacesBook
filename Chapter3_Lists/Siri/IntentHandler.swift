@@ -38,7 +38,7 @@ class IntentHandler: INExtension {
 extension IntentHandler : INCreateTaskListIntentHandling {
     
     public func handle(intent: INCreateTaskListIntent,
-                       completion: @escaping (INCreateTaskListIntentResponse) -> Swift.Void) {
+                       completion: @escaping (INCreateTaskListIntentResponse) -> Void) {
         
         guard let title = intent.title else {
             completion(INCreateTaskListIntentResponse(code: .failure, userActivity: nil))
@@ -72,7 +72,7 @@ extension IntentHandler : INCreateTaskListIntentHandling {
 extension IntentHandler : INAddTasksIntentHandling {
     
     public func handle(intent: INAddTasksIntent,
-                       completion: @escaping (INAddTasksIntentResponse) -> Swift.Void) {
+                       completion: @escaping (INAddTasksIntentResponse) -> Void) {
         
         let taskList = intent.targetTaskList
         
@@ -102,7 +102,7 @@ extension IntentHandler : INAddTasksIntentHandling {
 extension IntentHandler : INSetTaskAttributeIntentHandling {
     
     public func handle(intent: INSetTaskAttributeIntent,
-                       completion: @escaping (INSetTaskAttributeIntentResponse) -> Swift.Void) {
+                       completion: @escaping (INSetTaskAttributeIntentResponse) -> Void) {
         
         guard let title = intent.targetTask?.title else {
             completion(INSetTaskAttributeIntentResponse(code: .failure, userActivity: nil))

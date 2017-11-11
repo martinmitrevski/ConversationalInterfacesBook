@@ -13,7 +13,8 @@ class TasksViewController: UIViewController, UITableViewDataSource {
     private var cellIdentifier = "TasksCell"
     var listName: String?
     @IBOutlet weak var tableView: UITableView!
-    
+    var tasks: [String] = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = listName

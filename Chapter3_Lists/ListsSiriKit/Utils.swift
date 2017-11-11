@@ -24,7 +24,7 @@ func alertForAddingItems(title: String,
 }
 
 func addActions(toAlertController alertController: UIAlertController,
-                saveActionHandler: @escaping ((UIAlertAction) -> Swift.Void))
+                saveActionHandler: @escaping ((UIAlertAction) -> Void))
     -> UIAlertController {
         
     let saveAction = UIAlertAction(title: "Save", style: .default, handler: saveActionHandler)
