@@ -102,7 +102,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                        action: @escaping (NSLinguisticTag?,
                                           NSRange,
                                           UnsafeMutablePointer<ObjCBool>,
-                                          String) -> Swift.Void) {
+                                          String) -> Void) {
         let tagger = NSLinguisticTagger(tagSchemes:[.lemma], options: 0)
         tagger.string = text
         let range = NSRange(location:0, length: text.utf16.count)
