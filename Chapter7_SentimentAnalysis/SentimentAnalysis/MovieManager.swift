@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum ReviewSentiment {
+    case Good
+    case Bad
+}
+
 class MovieManager {
     
     private let moviesKey = "moviesKey"

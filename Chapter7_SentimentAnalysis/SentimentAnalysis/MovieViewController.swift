@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum ReviewSentiment {
-    case Good
-    case Bad
-}
-
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var movieTitle: String!
